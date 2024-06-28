@@ -1,8 +1,25 @@
 #include "MyStack.h"
 
+void DEC_to_BIN(int a) {
+    MyStack::Stack<bool> bin;
+
+    while (a > 0) {
+        bin.push(a % 2);
+        a /= 2;
+    }
+
+    cout << "Binary: ";
+    while (!bin.isEmpty())
+    {
+        cout << bin.top();
+        bin.pop();
+    }
+    cout << endl;
+}
+
 int main()
 {
-    MyStack::Stack<int> a;
+   /* MyStack::Stack<int> a;
     a.push(5);
     a.push(-3);
     a.push(9);
@@ -13,9 +30,12 @@ int main()
     //Обробка стеку
     while (!a.isEmpty())
     {
-        cout << a.top() << " "; //Отримуємо останній елемент стеку
+        cout << a.top() << " delete\n"; //Отримуємо останній елемент стеку
+        a.showInfo();
         a.pop();//Видаляємо його із стеку
     }
-    cout << endl;
+    cout << endl;*/
+
+
 }
 
