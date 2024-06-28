@@ -57,5 +57,12 @@ namespace MyStack {
 				}
 			}
 		}
+
+		U top()const {
+			if (isEmpty()) throw "Stack is empty!";
+
+			return tail->info;
+		}
+
 	};
 }
