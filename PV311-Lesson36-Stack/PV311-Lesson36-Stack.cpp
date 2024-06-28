@@ -3,6 +3,7 @@
 void DEC_to_BIN(int a) {
     MyStack::Stack<bool> bin;
 
+    cout << "Number: " << a << endl;
     while (a > 0) {
         bin.push(a % 2);
         a /= 2;
@@ -37,5 +38,10 @@ int main()
     cout << endl;*/
 
 
+    for (int i = 0; i < 10; i++)
+    {
+        DEC_to_BIN(rand() % 20); 
+        cout << endl;
+    }
 }
 
