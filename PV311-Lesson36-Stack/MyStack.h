@@ -64,11 +64,9 @@ namespace MyStack {
 			return tail->info;
 		}
 
-		void showInfo()const
-		{
+		void showInfo()const{
 			DNode<U>* p = head;
-			while (p!=nullptr)
-			{
+			while (p != nullptr){
 				cout << p->info << " ";
 				p = p->next;
 			}
