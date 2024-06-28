@@ -44,6 +44,18 @@ namespace MyStack {
 			}
 		}
 
-
+		void pop() {
+			if (!isEmpty()) {
+				if (head == tail) { //Якщо залишився один вузол
+					delete head;
+					head = tail = nullptr;
+				}
+				else {//Якщо декілька вузлів
+					tail = tail->prev;
+					delete tail->next;
+					tail->next = nullptr;
+				}
+			}
+		}
 	};
 }
